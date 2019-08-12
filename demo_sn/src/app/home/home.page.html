@@ -1,14 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
+  <ion-toolbar color="warning">
+    <ion-title style="color: black">
+      ค้นหาข้อมูลพระ
     </ion-title>
+    <ion-buttons style="color: black" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content color="warning">
+
+  <ion-item color="warning">
+    <ion-label style="color: black" position="floating">กรอกรหัส</ion-label>
+    <ion-input class="border" style="color: black" type="text" [(ngModel)]="input" placeholder="กรอกรหัส"></ion-input>
+  </ion-item>
+  
+  <br>
+  <ion-button expand="full" color="success" (click)="getdata(input)">ค้นหา</ion-button>
 </ion-content>

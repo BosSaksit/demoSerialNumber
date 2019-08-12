@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CallpaiService } from '../callpai.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  input: string;
+
+  constructor(public callapi: CallpaiService, public router: Router) { }
+
+  public getdata(serial) {
+    console.log(this.input);
+    this.router.navigate(['/info-data', { code: serial }])
+   
+
+  }
 
 }

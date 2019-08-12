@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title style="color: black">login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center color="warning">
+  <img style="border-radius: 50%" width="80%" src="../../assets/153745-00.jpg">
+  <ion-item color="warning">
+    <ion-label style="color: black" position="floating">Username</ion-label>
+    <ion-input class="border" style="color: black" type="text" placeholder=" Username"></ion-input>
+  </ion-item>
+
+  <ion-item color="warning">
+    <ion-label style="color: black" position="floating">Password</ion-label>
+    <ion-input class="border" style="color: black" type="text" placeholder=" Password"></ion-input>
+  </ion-item>
+
+  <ion-button style="color: black" color="success" (click)="checklogin()">เข้าสู่ระบบ</ion-button>
+  <br>
+  <ion-button fill="clear" color="success" (click)="toRegisterPage()">ลงทะเบียน</ion-button>
+</ion-content>

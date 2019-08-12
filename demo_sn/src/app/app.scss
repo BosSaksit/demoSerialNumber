@@ -4,3 +4,19 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+.invalid {
+    border: 1px solid red;
+}
+
+.invalid-msg{
+    color: red;
+}
+.border{
+    background-color: white;
+    border: 1px solid rgb(10, 10, 10);
+    border-radius: 5px;
+}
+.resizepic{
+    width: 300px;
+    height: 300px;
+}

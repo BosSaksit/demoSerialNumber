@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <br>
+  <form [formGroup]="dataUser" (ngSubmit)="log()">
+
+    <ion-item [class.invalid]="submitRequested && f.nameUser.errors">
+      <ion-label position="floating">ชื่อ</ion-label>
+      <ion-input formControlName="nameUser" type="text" placeholder="กรอกชื่อ"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="submitRequested && f.nameUser.errors">
+      <span class="invalid-msg">
+        กรอกชื่อ
+      </span>
+    </ion-item>
+
+    <ion-item [class.invalid]="submitRequested && f.telUser.errors">
+      <ion-label position="floating">เบอร์โทร</ion-label>
+      <ion-input formControlName="telUser" type="text" placeholder="กรอกเบอร์โทร"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="submitRequested && f.telUser.errors">
+      <span class="invalid-msg">
+        กรอกเบอร์โทร
+      </span>
+    </ion-item>
+
+    <ion-item [class.invalid]="submitRequested && f.addressUser.errors">
+      <ion-label position="floating">ที่อยู่</ion-label>
+      <ion-input type="text" formControlName="addressUser" placeholder="กรอกที่อยู่"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="submitRequested && f.addressUser.errors">
+      <span class="invalid-msg">
+        กรอกที่อยู่
+      </span>
+    </ion-item>
+
+    <ion-item [class.invalid]="submitRequested && f.idcardUser.errors">
+      <ion-label position="floating">รหัสบัตรประชาชน</ion-label>
+      <ion-input formControlName="idcardUser" type="text" placeholder="กรอกรหัสบัตรประชาชน"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="submitRequested && f.idcardUser.errors">
+      <span class="invalid-msg">
+        กรอกรหัสบัตรประชาชน
+      </span>
+    </ion-item>
+
+    <ion-button color="success" type="submit">ยืนยัน</ion-button>
+  </form>
+</ion-content>
